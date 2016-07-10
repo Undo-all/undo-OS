@@ -1,0 +1,18 @@
+[package]
+name = "undo-OS"
+version = "0.0.1"
+authors = ["undoall <undoall2@gmail.com>"]
+
+[lib]
+crate-type = ["staticlib"]
+
+[dependencies]
+rlibc = "*"
+spin = "*"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
